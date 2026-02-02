@@ -18,7 +18,7 @@ export default function HomePage() {
                 <div className={styles.heroContent}>
                     <h1 className={styles.title}>
                         <span className={styles.titleLine}>Welcome to the</span>
-                        <span className={styles.titleMain}>MS Paint Gallery</span>
+                        <span className={styles.titleMain}>MSPAINTED Gallery</span>
                     </h1>
 
                     <p className={styles.subtitle}>
