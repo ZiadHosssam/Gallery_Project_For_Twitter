@@ -59,7 +59,7 @@ export default function HomePage() {
                 <div className={styles.feature}>
                     <span className={styles.featureIcon}>🖼️</span>
                     <h3>Original Artworks</h3>
-                    <p>Every piece created exclusively in MS Paint</p>
+                    <p>Every piece created exclusively by the one and only Somaiya</p>
                 </div>
                 <div className={styles.feature}>
                     <span className={styles.featureIcon}>📝</span>
