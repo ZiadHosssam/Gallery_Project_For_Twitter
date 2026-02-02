@@ -1,0 +1,71 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'MS Sans Serif', 'Segoe UI', Tahoma, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    position: relative;
+
+    /* Windows 95 style beveled border */
+    background: linear-gradient(180deg, #dfdfdf 0%, #c0c0c0 100%);
+    border: 2px solid;
+    border-top-color: #ffffff;
+    border-left-color: #ffffff;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    box-shadow:
+        1px 1px 0 #000000,
+        inset 1px 1px 0 #ffffff;
+}
+
+.button:hover {
+    background: linear-gradient(180deg, #e8e8e8 0%, #d0d0d0 100%);
+}
+
+.button:active {
+    border-top-color: #404040;
+    border-left-color: #404040;
+    border-right-color: #ffffff;
+    border-bottom-color: #ffffff;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transform: translate(1px, 1px);
+}
+
+/* Size variants */
+.small {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.medium {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.large {
+    padding: 14px 32px;
+    font-size: 18px;
+}
+
+/* Color variants */
+.primary {
+    color: #000000;
+}
+
+.primary:hover {
+    background: linear-gradient(180deg, #0000ff 0%, #000080 100%);
+    color: #ffffff;
+}
+
+.secondary {
+    background: linear-gradient(180deg, #008000 0%, #004000 100%);
+    color: #ffffff;
+}
+
+.secondary:hover {
+    background: linear-gradient(180deg, #00a000 0%, #006000 100%);
+}

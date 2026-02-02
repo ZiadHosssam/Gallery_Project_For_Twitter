@@ -1,0 +1,197 @@
+.container {
+    min-height: calc(100vh - 140px);
+    padding: 40px 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.navigation {
+    margin-bottom: 30px;
+}
+
+.artwork {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Large MS Paint style frame */
+.frame {
+    background: linear-gradient(145deg, #c0c0c0 0%, #a0a0a0 100%);
+    border: 6px solid #000080;
+    border-top-color: #ffffff;
+    border-left-color: #ffffff;
+    border-right-color: #000000;
+    border-bottom-color: #000000;
+    padding: 12px;
+    box-shadow:
+        6px 6px 0 #000080,
+        10px 10px 20px rgba(0, 0, 0, 0.25);
+    max-width: 100%;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.imageContainer {
+    border: 4px solid #000000;
+    border-top-color: #808080;
+    border-left-color: #808080;
+    border-right-color: #ffffff;
+    border-bottom-color: #ffffff;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    max-height: 60vh;
+    object-fit: contain;
+}
+
+/* Artwork info section */
+.info {
+    text-align: center;
+    max-width: 500px;
+    animation: fadeIn 0.6s ease-out 0.2s backwards;
+}
+
+.placardLarge {
+    margin-bottom: 20px;
+}
+
+.placardLarge>div {
+    transform: scale(1.2);
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #404040;
+    margin-bottom: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #c0c0c0;
+}
+
+.date {
+    font-size: 14px;
+    color: #808080;
+    font-style: italic;
+}
+
+/* Prev/Next navigation */
+.artworkNav {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #808080;
+}
+
+.navLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 24px;
+    background: linear-gradient(180deg, #dfdfdf 0%, #c0c0c0 100%);
+    border: 2px solid;
+    border-top-color: #ffffff;
+    border-left-color: #ffffff;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    text-decoration: none;
+    color: #000000;
+    transition: all 0.2s ease;
+    min-width: 120px;
+}
+
+.navLink:hover {
+    background: linear-gradient(180deg, #e8e8e8 0%, #d0d0d0 100%);
+    transform: translateY(-2px);
+}
+
+.navArrow {
+    font-size: 20px;
+    color: #000080;
+}
+
+.navLabel {
+    font-size: 12px;
+    color: #808080;
+    text-transform: uppercase;
+}
+
+.navTitle {
+    font-size: 12px;
+    color: #404040;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.navPlaceholder {
+    min-width: 120px;
+}
+
+/* Not found state */
+.notFound {
+    text-align: center;
+    padding: 80px 24px;
+}
+
+.notFound h1 {
+    font-size: 36px;
+    color: #000080;
+    margin-bottom: 16px;
+}
+
+.notFound p {
+    font-size: 18px;
+    color: #404040;
+    margin-bottom: 30px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 16px;
+    }
+
+    .frame {
+        padding: 8px;
+        border-width: 4px;
+    }
+
+    .artworkNav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .navLink {
+        width: 100%;
+    }
+
+    .placardLarge>div {
+        transform: scale(1);
+    }
+}
